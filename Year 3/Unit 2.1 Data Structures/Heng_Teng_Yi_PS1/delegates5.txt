@@ -1,0 +1,5 @@
+0,Austro-Bavarian,Polish,Turkish,
+1,Russian,Austro-Bavarian,Ukrainian,
+2,German,French,Serbian,English,
+3,Spanish,French,Portuguese,
+4,French,Dutch,Portuguese,

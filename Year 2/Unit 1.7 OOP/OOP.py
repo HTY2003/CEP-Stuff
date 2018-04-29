@@ -1,0 +1,2 @@
+class Coordinate (object):
+    pass
