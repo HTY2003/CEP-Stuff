@@ -8,12 +8,14 @@ if sys.version_info[0] == 3:
 else:
     _get_byte = ord
 
-class CHashTable:
+class HashTable:
     """
-    Hash table that uses chained lists to handle collsions between items added,
-    allowing for multiple elements to be contained within one index.
-    It also uses the __fnv1 hash, designed for speed and randomness to prevent
-    clustering and too many collisions.
+    Hash table that uses separate chaining to assign to assign key-value pairs
+
+    Separate chaining eliminates the need for collision resolution through probing,
+    by chaining values together in a list in the index(hashed key),
+    and the FNV1 hash which is fast and random allows for more even spacing between
+    values, reducing lookup times.
     """
 
     def __init__(self,size):
@@ -21,8 +23,9 @@ class CHashTable:
         Initializes hash table array to the size specified. Prime numbers recommended.
 
         Example usage:
-        >>> a = CHashTable(37)                                                    """
+        >>> a = HashTable(37)                                                    """
 
+        #Initializes array and variables
         self._size = size
         self._taken = 0
         PyArrayType  =  ctypes.py_object * self._size
@@ -35,93 +38,95 @@ class CHashTable:
         Time complexity: O(1)
 
         Example usage:
-        >>> a = CHashTable(37)
+        >>> a = HashTable(37)
         >>> print(len(a))
         37                                     """
-
         return self._size
 
     def __str__(self):
         """
-        Returns string of a hash table array, containing each array index and the array element it contains
+        Returns string of a hash table array, containing each array index, key, and value it maps to
 
         Time complexity: O(n)
 
         Example usage:
-        >>> a = CHashTable(4)
-        >>> a.add("Tom")
-        >>> a.add("Jerry")
+        >>> a = HashTable(4)
+        >>> a.add("Jerry", "Tom")
+        >>> a.add("Tom", "Jerry")
         >>> print(a)
         0   None
         1   None
         2   None
-        3   Tom    Jerry                                                                                """
+        3   Jerry : Tom
+            Tom : Jerry                                                                                """
 
+        #Heavily formats array into a readable format
         string = ""
         substring = ""
         for index in range(self._size):
-            if self._data[index] is not None:
-                for subitem in self._data[index]:
-                    if subitem == self._data[index][0]:
-                        substring += (" " * (6-len(str(index)))) + str(subitem)
-                    else:
-                        substring += "      " + str(subitem)
-                string += str(index) + substring + "\n"
-                substring = ""
+            if self._data[index] is None:
+                string += str(index) + (" " * (6-len(str(index)))) + "None" + "\n"
             else:
-                string += str(index) + "    " + str(None) + "\n\n"
+                substring += str(index) + (" " * (6-len(str(index))))
+                for i in self._data[index]:
+                    substring += str(i[0]).strip("\n") + " : " + str(i[1]).strip("\n") + "\n      "
+                string += substring
+                string = string [:-5]
+                string += "\n"
+                substring = ""
+        # And returns it
         return string
 
     __repr__ = __str__
 
     def __iter__(self):
         """
-        Loops through the elements of the hash table array
+        Loops through the values(not the keys) of the hash table array
+        None values are not iterated.
 
         Time complexity: O(n)
 
         Example usage:
-        >>> a = CHashTable(4)
-        >>> a.add("Tom")
-        >>> a.add("Jerry")
+        >>> a = HashTable(4)
+        >>> a.add("Jerry", "Tom")
+        >>> a.add("Tom", "Jerry")
         >>> print(a)
         0   None
         1   None
         2   None
-        3   Tom    Jerry
+        3   Jerry : Tom
+            Tom : Jerry
         >>> for i in a:
         >>>     print(i)
-        None
-        None
-        None
         Tom
-        Jerry                                            """
-        iterlist = deque()
+        Jerry                                         """
+
+        values = deque()
+        #Loops through original array
         for item in self._data:
-            if item is None:
-                iterlist.append(None)
-            else:
+            #ignores None values
+            if item is not None:
                 for subitem in item:
-                    iterlist.append(subitem)
-        return iter(iterlist)
+                    values.append(subitem[1])
+        return iter(values)
 
 
-    def __setitem__(self,key):
-        "Same as self.add(element): " + self.add.__doc__
-        return self.add(key)
+    def __setitem__(self,key,value):
+        "Same as self.add(key,value): " + self.add.__doc__
+        return self.add(key,value)
 
     def __getitem__(self,key):
-        "Same as self.get(element): " + self.get.__doc__
+        "Same as self.get(key): " + self.get.__doc__
         return self.get(key)
 
     def __delitem__(self,key):
-        "Same as self.remove(element): " + self.remove.__doc__
+        "Same as self.remove(key): " + self.remove.__doc__
         return self.remove(key)
 
     def __fnv1(self,data):
         """
         Function(hidden) that converts integers and strings into bytes
-        before hashing them into index values using the __fnv1 algorithm,
+        before hashing them into index values using the FNV1 algorithm,
         designed for speed and randomness for less collisions.
         """
 
@@ -141,56 +146,138 @@ class CHashTable:
         #Returns modulus of hashed value by the size of the hash table
         return hval % self._size
 
-    def __chain(self,index,element):
+    def __chain(self,key,value):
         """
-        Function(hidden) that adds element to the list in the index of the array.
+        Function(hidden) that adds value to the list in the index of the array.
         Since the collections.deque object has O(1) append time, this action is pretty fast.
         """
+        #Hashes the key into the index
+        index = self.__fnv1(key)
+        #Starts chain if it doesn't exist yet
         if self._data[index] is None:
             self._taken += 1
             self._data[index] = deque()
-        self._data[index].append(element)
+        #Adds value to deque in index
+        self._data[index].append((key,value))
 
-    def __search(self,index,element):
+    def __search(self,key):
         """
-        Function(hidden) that attempts to find the index of the chain in which the element
-        is stored in before returning it. If the element is not found, None is returned.
+        Function(hidden) that attempts to find the value in the chain which
+        the key maps to. If the key is not found, None is returned.
         """
+        #Hashes the key into the index
+        index = self.__fnv1(key)
+        #Search through any non-empty chains in the index
         if self._data[index] is not None:
-            if len(self._data[index]) != 0:
-                for i in range(len(self._data[index])):
-                    if self._data[index][i] is element:
-                        return i
-            else: return None
-        else: return None
+            for i in range(len(self._data[index])):
+                if self._data[index][i][0] is key:
+                    return index, self._data[index][i][1]
+        #If the index is empty, return None, None
+        return None, None
+
+    def add(self,key,value):
+        """
+        Function that assigns value to the hash table array using the
+        FNV1-hashed version of the key as the array index
+
+        Two of the same keys CAN be used in one table, but when searching,
+        only the value of the first instance of the key will be returned until it is removed
+
+        Time complexity: O(1)
+
+        Example usage:
+        >>> a = HashTable(4)
+        >>> a.add("Jerry","Tom")
+        >>> a.add("Tom","Jerry")
+        >>> print(a)
+        0   None
+        1   None
+        2   None
+        3   Jerry : Tom
+            Tom : Jerry                                             """
+        #Chains value to the chain in that index
+        #The collection.deque allows appending to be O(1), hence the fast speed
+        self.__chain(key, value)
+
+    def get(self,key):
+        """
+        Function that retrieves and returns the value which the key maps to
+        If the key is not in the hash table, it returns None.
+
+        Time complexity(average): O(log n)
+        Time complexity(worst-case): O(n)
+
+        Example usage:
+        >>> a = HashTable(4)
+        >>> a.add("Jerry", "Tom")
+        >>> print(a.get("Jerry"))
+        Tom                                                                                                 """
+        return self.__search(key)[1]
+
+    def remove(self,key):
+        """
+        Function that returns and removes the value which the key maps to
+        If the key is not in the hash table, it returns None.
+
+        Time complexity(average): O(log n)
+        Time complexity(worst-case): O(n)
+
+        Example usage:
+        >>> a = HashTable(4)
+        >>> a.add("Jerry", "Tom")
+        >>> a.add("Tom", "Jerry")
+        >>> print(a)
+        0   None
+        1   None
+        2   None
+        3   Jerry : Tom
+            Tom : Jerry
+        >>> a.remove("Tom")
+        >>> print(a)
+        0   None
+        1   None
+        2   None
+        3   Jerry : Tom                                                                """
+
+        index = self.__search(key)
+        try:
+            #removes value from the deque in the index
+            self._data[index[0]].remove((key,index[1]))
+            if len(self._data[index[0]]) == 0:
+                #account for loss of a filled deque
+                self._taken -= 1
+            return index
+        #return None if index is not a deque object
+        except ValueError:
+            return None
 
     def used(self):
         """
-        Function that returns the number of non-empty indexes in the array
+        Function that returns the number of chains in the array
         This can be used if the user wants to see how full or empty the array is,
         and use the self.rehash() function to resize the array accordingly.
-        This does NOT refer to the number of elements in the array, just the
-        number of chains in the array which the elements are stored in.
+
+        This does NOT refer to the number of key-value pairs in the array, just the
+        number of non-empty chains in the array which the pairs are stored in.
 
         Time complexity: O(1)
 
         E.g:
-        >>> a = CHashTable(1)
-        >>> a.add("Tom")
-        >>> a.add(1)
-        >>> a.add("Hello Mars")
+        >>> a = HashTable(1)
+        >>> a.add("Jerry","Tom")
+        >>> a.add("Tom", "Jerry")
         >>> print a.used()
         1                                                                    """
+        #Return number of non-empty chains in hash table
         return self._taken
 
     def checkrehash(self,max=80,min=20,multiplier=2,divisor=2):
         """
-        Function a user can use to resize the array based on how full it is
-        If the array exceeds <max> % capacity(80% by default) in use, the array will
-        multiply itself by the multiplier (2 by default). If the array goes under <min>%
-        capacity(20% by default), the array will divide itself by the divisor (2 by default).
-        This allows users to trim or expand their arrays without interfering with their
-        liberty to resize at will.
+        Function a user can use to resize the array based on how full it is (no. of chains in the array)
+        If the array exceeds <max> % capacity(80% by default) in use, the array will multiply itself by the multiplier (2 by default).
+        If the array goes under <min>% capacity(20% by default), the array will divide itself by the divisor (2 by default).
+
+        This allows users to trim or expand their arrays without interfering with their liberty to resize at will.
 
         Time complexity(average): O(log n)
         Time complexity(worst-case): O(n)
@@ -212,15 +299,14 @@ class CHashTable:
 
     def rehash(self,size):
         """
-        Function that resizes the hash table array to the specified size, allowing it to store
-        more elements, done by creating a new array of the new size, and re-assigning each
-        non-empty value in the array to the new array based on the new size.
+        Function that resizes the hash table array to the specified size,
+        allowing it to store more key-value pairs.
 
         Time complexity(average): O(log n)
         Time complexity(worst-case): O(n)
 
         Example usage:
-        >>> a = CHashTable(10)
+        >>> a = HashTable(10)
         >>> print(len(a))
         10
         >>> a.resize(128)
@@ -233,89 +319,9 @@ class CHashTable:
         #Makes new array of specified size
         PyArrayType  =  ctypes.py_object * self._size
         self._data = PyArrayType(*([None] * self._size))
-        #If element is part of a chain, it is added to the new array
+        #If index is not None, it is added to the new array
         for item in self._olddata:
             if item is not None:
                 for subitem in item:
-                    self.add(subitem)
-
-    def add(self,element):
-        """
-        Function that assigns element to the hash table array using the
-        __fnv1-hashed version of the element as the array index
-
-        Time complexity: O(1)
-
-        Example usage:
-        >>> a = CHashTable(4)
-        >>> a.add("Tom")
-        >>> a.add("Jerry")
-        >>> print(a)
-        0   None
-        1   None
-        2   None
-        3   Tom     Jerry                                         """
-
-        #Hashes the element into the index
-        index = self.__fnv1(element)
-        #Chains element to the list in that index
-        #The collection.deque allows appending to be O(1), hence the fast speed
-        self.__chain(index, element)
-
-    def get(self,element):
-        """
-        Function that retrieves and returns the tuple of indexes which the given element can be accessed through
-        If the element is not in the hash table, it returns None.
-
-        Time complexity(average): O(log n)
-        Time complexity(worst-case): O(n)
-
-        Example usage:
-        >>> a = CHashTable(4)
-        >>> a.add("Tom")
-        >>> print(a.get("Tom"))
-        (3, 0)                                                                                              """
-
-        #Hashes the element into the index
-        index = self.__fnv1(element)
-        #Returns None if element is not found
-        if self.__search(index, element) is None:
-            return None
-        #Returns tuple of indexes otherwise
-        return index, self.__search(index, element)
-
-    def remove(self,element):
-        """
-        Function that retrieves and returns the indexes which the given element in stored in,
-        then makes the index slot empty, removing the element from the hash table.
-        If the element is not in the hash table, it returns None.
-
-        Time complexity(average): O(log n)
-        Time complexity(worst-case): O(n)
-
-        Example usage:
-        >>> a = CHashTable(4)
-        >>> a.add("Tom")
-        >>> print(a)
-        0   None
-        1   None
-        2   None
-        3   Tom
-        >>> a.remove("Tom")
-        >>> print(a)
-        0   None
-        1   None
-        2   None
-        3
-
-
-        Note: Empty spaces also signify empty slots                                     """
-
-        index = self.__fnv1(element)
-        try:
-            self._data[index].remove(element)
-            if len(self._data[index]) == 0:
-                self._taken -= 1
-            return index
-        except ValueError:
-            return None
+                    self.add(subitem[0], subitem[1])
+        self._olddata = 0

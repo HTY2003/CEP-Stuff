@@ -3,13 +3,13 @@ def scramble2Encrypt(plainText):
     Scramble the plaintext according to odd or even characters
     The resultant ciphertext is the concatenation of the odd character string
     and the even character string.
-    Returns the scrambled ciphertext. 
+    Returns the scrambled ciphertext.
     '''
     evenChars = ""
     oddChars = ""
     charCount = 0
-    for ch in plainText:            
-        if charCount % 2 == 0:          
+    for ch in plainText:
+        if charCount % 2 == 0:
             evenChars = evenChars + ch
         else:
             oddChars = oddChars + ch
@@ -32,11 +32,11 @@ def scramble2Decrypt(cipherText):
 
     '''
     halfLength = len(cipherText) // 2
-    oddChars = cipherText[:halfLength]      
-    evenChars = cipherText[halfLength:]     
+    oddChars = cipherText[:halfLength]
+    evenChars = cipherText[halfLength:]
     plainText = ""
 
-    for i in range(halfLength):             
+    for i in range(halfLength):
         plainText = plainText + evenChars[i]
         plainText = plainText + oddChars[i]
 
@@ -51,8 +51,6 @@ def encryptMessage():
     print('The encrypted message is: ', cipherText)
 
 
-print(scramble2Encrypt('baba black sheep'))
+print(scramble2Encrypt('abcd'))
 print(scramble2Decrypt('aabaksepbb lc he'))
 print(scramble2Decrypt(scramble2Encrypt("hello")))
-
-
