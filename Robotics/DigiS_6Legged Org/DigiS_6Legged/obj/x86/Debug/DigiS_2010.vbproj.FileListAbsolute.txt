@@ -1,0 +1,12 @@
+D:\+TwoP3\+Projects\DigiS_2010\DigiS_2010\bin\Debug\DigiS_2010.exe
+D:\+TwoP3\+Projects\DigiS_2010\DigiS_2010\bin\Debug\DigiS_2010.pdb
+D:\+TwoP3\+Projects\DigiS_2010\DigiS_2010\bin\Debug\DigiS_2010.xml
+D:\+TwoP3\+Projects\DigiS_2010\DigiS_2010\obj\x86\Debug\WindowsApplication1.Resources.resources
+D:\+TwoP3\+Projects\DigiS_2010\DigiS_2010\obj\x86\Debug\DigiS_2010.vbproj.GenerateResource.Cache
+D:\+TwoP3\+Projects\DigiS_2010\DigiS_2010\obj\x86\Debug\DigiS_2010.exe
+D:\+TwoP3\+Projects\DigiS_2010\DigiS_2010\obj\x86\Debug\DigiS_2010.xml
+D:\+TwoP3\+Projects\DigiS_2010\DigiS_2010\obj\x86\Debug\DigiS_2010.pdb
+D:\+TwoP3\+Projects\DigiS_2010\DigiS_2010\obj\x86\Debug\WindowsApplication1.FMain.resources
+D:\+TwoP3\+Projects\Six Legged\DigiS_6Legged\DigiS_2010\obj\x86\Debug\DigiS_2010.exe
+D:\+TwoP3\+Projects\Six Legged\DigiS_6Legged\DigiS_2010\obj\x86\Debug\DigiS_2010.xml
+D:\+TwoP3\+Projects\Six Legged\DigiS_6Legged\DigiS_2010\obj\x86\Debug\DigiS_2010.pdb

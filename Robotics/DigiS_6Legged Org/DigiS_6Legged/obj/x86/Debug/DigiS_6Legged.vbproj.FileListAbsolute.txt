@@ -1,0 +1,45 @@
+D:\+TwoP3\+Projects\Six Legged\DigiS_6Legged\DigiS_2010\obj\x86\Debug\DigiS_2010.exe
+D:\+TwoP3\+Projects\Six Legged\DigiS_6Legged\DigiS_2010\obj\x86\Debug\DigiS_2010.xml
+D:\+TwoP3\+Projects\Six Legged\DigiS_6Legged\DigiS_2010\obj\x86\Debug\DigiS_2010.pdb
+D:\+TwoP3\+Projects\Six Legged\DigiS_6Legged\DigiS_6Legged\obj\x86\Debug\DigiS_2010.exe
+D:\+TwoP3\+Projects\Six Legged\DigiS_6Legged\DigiS_6Legged\obj\x86\Debug\DigiS_2010.xml
+D:\+TwoP3\+Projects\Six Legged\DigiS_6Legged\DigiS_6Legged\obj\x86\Debug\DigiS_2010.pdb
+D:\+TwoP3\+Projects\Six Legged\DigiS_6Legged\DigiS_6Legged\bin\Debug\DigiS_2010.exe
+D:\+TwoP3\+Projects\Six Legged\DigiS_6Legged\DigiS_6Legged\bin\Debug\DigiS_2010.pdb
+D:\+TwoP3\+Projects\Six Legged\DigiS_6Legged\DigiS_6Legged\bin\Debug\DigiS_2010.xml
+D:\+TwoP3\+Projects\Six Legged\DigiS_6Legged\DigiS_6Legged\obj\x86\Debug\WindowsApplication1.FMain.resources
+D:\+TwoP3\+Projects\Six Legged\DigiS_6Legged\DigiS_6Legged\obj\x86\Debug\WindowsApplication1.Resources.resources
+D:\+TwoP3\+Projects\Six Legged\DigiS_6Legged\DigiS_6Legged\obj\x86\Debug\DigiS_6Legged.vbproj.GenerateResource.Cache
+D:\++MM\ZLessons\Six Legged\DigiS_6Legged\DigiS_6Legged\obj\x86\Debug\WindowsApplication1.FMain.resources
+D:\++MM\ZLessons\Six Legged\DigiS_6Legged\DigiS_6Legged\obj\x86\Debug\WindowsApplication1.Resources.resources
+D:\++MM\ZLessons\Six Legged\DigiS_6Legged\DigiS_6Legged\obj\x86\Debug\DigiS_6Legged.vbproj.GenerateResource.Cache
+D:\++MM\ZLessons\Six Legged\DigiS_6Legged\DigiS_6Legged\obj\x86\Debug\DigiS_6Legged.vbproj.CoreCompileInputs.cache
+D:\++MM\ZLessons\Six Legged\DigiS_6Legged\DigiS_6Legged\obj\x86\Debug\DigiS_2010.exe
+D:\++MM\ZLessons\Six Legged\DigiS_6Legged\DigiS_6Legged\obj\x86\Debug\DigiS_2010.xml
+D:\++MM\ZLessons\Six Legged\DigiS_6Legged\DigiS_6Legged\obj\x86\Debug\DigiS_2010.pdb
+D:\++MM\ZLessons\Six Legged\DigiS_6Legged\DigiS_6Legged\bin\Debug\DigiS_2010.exe
+D:\++MM\ZLessons\Six Legged\DigiS_6Legged\DigiS_6Legged\bin\Debug\DigiS_2010.pdb
+D:\++MM\ZLessons\Six Legged\DigiS_6Legged\DigiS_6Legged\bin\Debug\DigiS_2010.xml
+D:\++MM\ZLessons\Six Legged\DigiS_6Legged\DigiS_6Legged\obj\x86\Debug\DigiS_6Legged.vbprojResolveAssemblyReference.cache
+D:\++MM\ZLessons\Six Legged\DigiS_6Legged Org\DigiS_6Legged\bin\Debug\DigiS_2010.exe
+D:\++MM\ZLessons\Six Legged\DigiS_6Legged Org\DigiS_6Legged\bin\Debug\DigiS_2010.pdb
+D:\++MM\ZLessons\Six Legged\DigiS_6Legged Org\DigiS_6Legged\bin\Debug\DigiS_2010.xml
+D:\++MM\ZLessons\Six Legged\DigiS_6Legged Org\DigiS_6Legged\obj\x86\Debug\WindowsApplication1.FMain.resources
+D:\++MM\ZLessons\Six Legged\DigiS_6Legged Org\DigiS_6Legged\obj\x86\Debug\WindowsApplication1.Resources.resources
+D:\++MM\ZLessons\Six Legged\DigiS_6Legged Org\DigiS_6Legged\obj\x86\Debug\DigiS_6Legged.vbproj.GenerateResource.Cache
+D:\++MM\ZLessons\Six Legged\DigiS_6Legged Org\DigiS_6Legged\obj\x86\Debug\DigiS_6Legged.vbproj.CoreCompileInputs.cache
+D:\++MM\ZLessons\Six Legged\DigiS_6Legged Org\DigiS_6Legged\obj\x86\Debug\DigiS_2010.exe
+D:\++MM\ZLessons\Six Legged\DigiS_6Legged Org\DigiS_6Legged\obj\x86\Debug\DigiS_2010.xml
+D:\++MM\ZLessons\Six Legged\DigiS_6Legged Org\DigiS_6Legged\obj\x86\Debug\DigiS_2010.pdb
+D:\++MM\ZLessons\Six Legged\DigiS_6Legged Org\DigiS_6Legged\obj\x86\Debug\DigiS_6Legged.vbprojAssemblyReference.cache
+D:\Robotics\DigiS_6Legged Org\DigiS_6Legged\bin\Debug\DigiS_2010.exe
+D:\Robotics\DigiS_6Legged Org\DigiS_6Legged\bin\Debug\DigiS_2010.pdb
+D:\Robotics\DigiS_6Legged Org\DigiS_6Legged\bin\Debug\DigiS_2010.xml
+D:\Robotics\DigiS_6Legged Org\DigiS_6Legged\obj\x86\Debug\DigiS_6Legged.vbprojAssemblyReference.cache
+D:\Robotics\DigiS_6Legged Org\DigiS_6Legged\obj\x86\Debug\WindowsApplication1.FMain.resources
+D:\Robotics\DigiS_6Legged Org\DigiS_6Legged\obj\x86\Debug\WindowsApplication1.Resources.resources
+D:\Robotics\DigiS_6Legged Org\DigiS_6Legged\obj\x86\Debug\DigiS_6Legged.vbproj.GenerateResource.cache
+D:\Robotics\DigiS_6Legged Org\DigiS_6Legged\obj\x86\Debug\DigiS_6Legged.vbproj.CoreCompileInputs.cache
+D:\Robotics\DigiS_6Legged Org\DigiS_6Legged\obj\x86\Debug\DigiS_2010.exe
+D:\Robotics\DigiS_6Legged Org\DigiS_6Legged\obj\x86\Debug\DigiS_2010.xml
+D:\Robotics\DigiS_6Legged Org\DigiS_6Legged\obj\x86\Debug\DigiS_2010.pdb
