@@ -1,0 +1,57 @@
+<head>
+  <meta name="viewport" content="width=device-width">
+   <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <title>Fake News Detector</title>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+</head>
+
+<script>
+  if (location.protocol != 'https:') {
+   location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
+  }
+</script>
+
+<body>
+  <div class="container">
+    <center>
+
+      <div id="setup" style="font-family:Arial;text-align:center;margin-top:3vw;">
+          <img style="width:8vw;min-width:70px;" src="newspaper.png"><br>
+          <span style="font-size:4vw;">Fake News Detector</span>
+          </div><br>
+        <form id="myForm" action="/results" method="POST" onsubmit="event.preventDefault(); return myfunction();">
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="userphrase" type="text" name="userphrase" class="validate" autocomplete="off">
+                <label for="userphrase">Text Phrase to Search</label>
+              </div>
+              <div class="input-field col s12">
+                <input id="username" type="text" name="username" class="validate" autocomplete="off">
+                <label for="username">Twitter Username</label>
+              </div>
+          </div>
+
+          <button type="Submit" class="waves-effect waves-light btn teal">Fact check</button>
+        </form>
+    </center>
+    <script>
+        function myfunction() {
+            var myarray = document.getElementById("userphrase").value.split(" ");
+            if (myarray.length <= 5 && document.getElementById("username").value == '') {
+                alert("Minimum input of 6 words...")
+                return false;
+            } else {
+                document.getElementById('myForm').submit();
+                return true;
+            }
+        }
+    </script>
+  </div>
+</body>
+
+
+

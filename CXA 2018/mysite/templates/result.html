@@ -1,0 +1,120 @@
+<head>
+  <meta name="viewport" content="width=device-width">
+   <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+    <title>Fake News Results</title>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<style type="text/css">
+	#navbar {
+	    font-family:Arial;
+		background-color: white;
+		font-size: 50px;
+		color: black;
+		height: 70px;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		box-shadow: 0 0.5px 7px 0 rgba(0, 0, 0, 0.15);
+		z-index: 3;
+		padding:auto;
+	}
+
+	.container {
+	    font-family: 'Inconsolata', monospace;
+	    text-align:center;
+	}
+
+    body {
+        overflow-y: auto;
+    }
+</style>
+
+<body>
+    <div id="navbar" style="padding:10px;text-align:center;">
+          <div class="row" style="margin:0;">
+          <div class="col m12" style="font-size:38px;">
+                <p style='margin:0;'><img style="height:80%;vertical-align: text-bottom;" src="newspaper.png"> Fake News Detector<a href='/' style="float:right;" class="waves-effect waves-light btn red">Back</a></p>
+          </div>
+        </div>
+	</div>
+
+  <div class="container">
+        <h5 style="margin-top:120px;">You have searched for: <span style="color:rgba(0,0,0,0.6)">{{searchtext}}</span></h5>
+
+        <div id="loader" style="padding:auto;padding-top:22vh;">
+            <div class="preloader-wrapper big active">
+                <div class="spinner-layer spinner-blue-only">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div><div class="gap-patch">
+                    <div class="circle"></div>
+                  </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+        <center>
+            <div id="displaychunk1" class="row" style="display:none;">
+                    <h1 id="ranknum" style="border-radius:8px;font-size:50px;margin:15px auto 10px auto;" class="col m12">{{rating}}</h1>
+                    <code class="col m12" style="font-size:16px;margin:0;">This is on a scale of 1-5 -> 1 being "Fake News" and 5 being "Fact"...</code>
+            </div>
+        </center>
+
+        <div id="displaychunk2" class="row" style="display:none;font-size:30px;">
+            <h4 style="text-align:left;"><u>Evidences</u></h4>
+            <div id="blockscontent" style="margin-top:30px;">
+                {% for title, url, imageurl, timestamp in metadata %}
+                <a style="text-decoration: none;color: inherit;" href="{{url}}">
+                  <div style="background-color:rbg(210,210,210);color:black;box-shadow: 0 0.5px 7px 0 rgba(0, 0, 0, 0.4);width:100%;border-radius:5px;padding:10px 15px 5px 15px;margin: 0px 0 15px 0;" class="col m-12">
+                      {% if imageurl != None %}
+                        <img style="height:28%;width:35%;float:left;" src="{{imageurl}}">
+                      {% endif %}
+                      <p style="font-size:26px;">{{title}}</p>
+                      <span style="font-size:10px;color:rgb(170,170,170);">Published on {{timestamp}}</span>
+                  </div>
+                </a>
+
+                {% endfor %}
+            </div>
+        </div>
+        <div style="margin-top:50px;"></div>
+  </div>
+
+  <script>
+    $(document).ready(function(){
+        var rating = Math.round($("#ranknum").text())
+        if (rating == "1") {
+            $("#ranknum").append(": Fake");
+            $("#ranknum").addClass( "red darken-2");
+        } else if(rating == "2") {
+            $("#ranknum").append(": Probably Fake");
+            $("#ranknum").addClass("red lighten-1");
+        } else if(rating == "3") {
+            $("#ranknum").append(" : Not sure");
+            $("#ranknum").addClass("grey lighten-2");
+        } else if(rating == "4") {
+            $("#ranknum").append(": Probably True");
+            $("#ranknum").addClass("green lighten-2");
+        } else if(rating == "5") {
+            $("#ranknum").append(": Fact");
+            $("#ranknum").addClass("green darken-1");
+        }
+
+        $("#loader").remove();
+        $("#displaychunk1").show();
+        $("#displaychunk2").show();
+            //var searchquery = btoa("{{searchtext}}")
+            //window.location.replace("https://cmminus.pythonanywhere.com/results/" + searchquery);
+    });
+  </script>
+</body>

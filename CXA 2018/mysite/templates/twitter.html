@@ -1,0 +1,76 @@
+<head>
+  <meta name="viewport" content="width=device-width">
+   <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+    <title>Twitter fake news</title>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<style type="text/css">
+	#navbar {
+	    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		background-color: white;
+		font-size: 50px;
+		color: black;
+		height: auto;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		box-shadow: 0 0.5px 7px 0 rgba(0, 0, 0, 0.15);
+		z-index: 3;
+		padding:auto;
+	}
+
+	.container {
+	    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	    text-align:center;
+	    color: rgb(29, 161, 242);
+	}
+
+    body {
+        overflow-y: auto;
+    }
+</style>
+
+<body>
+    <div id="navbar" style="padding:10px;text-align:center;">
+          <div class="row" style="margin:0;">
+          <div class="col m12" style="font-size:25px;">
+                <a href='/' style="float:right;" class="waves-effect waves-light btn red">Back</a>
+                <img style="height:16vh;vertical-align: text-bottom;position:relative;left:28px;" src="Twitter_Logo_Blue.png"><br>
+                <p style='margin:0;'>Fake News Detector (Twitter)</p>
+          </div>
+        </div>
+	</div>
+
+  <div class="container">
+        <h4 style="color:black;margin-top:35vh;"><strong>Twitter user: {{username}}</strong></h4>
+        <div id="displaychunk2" class="row" style="display:none;font-size:28px;">
+            <h4 style="text-align:left;color:black;"><u>Posts</u></h4>
+            <p style="width:100%,font-size:14px;text-align:center;color:black;margin:0;" class="flow-text">Ratings from Fake/Unsure (1) to True (5)</p>
+            <div id="blockscontent" style="margin-top:30px;">
+                {% for p, rating in posts %}
+                  <div style="background-color:rbg(210,210,210);color: rgba(29, 161, 242);box-shadow: 0 0.5px 7px 0 rgba(0, 0, 0, 0.4);width:100%;border-radius:5px;padding:10px;margin-top:20px;" class="row">
+                        <div style="margin:5px;" class="col m-3"><h2 style="float:left;">{{rating}}</h2></div>
+                        <div style="margin:5px;color:black;" class="col m-9"><p style="font-size:20px;float:right;">{{p}}</p></div>
+                  </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div style="margin-top:50px;"></div>
+  </div>
+
+  <script>
+    $(document).ready(function(){
+        $("#loader").remove();
+        $("#displaychunk2").show();
+    });
+  </script>
+</body>
+
