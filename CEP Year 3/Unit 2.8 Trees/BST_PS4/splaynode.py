@@ -15,4 +15,5 @@ class Node:
     def __getitem___(self, index):
         if index == 0: return self.key
         if index == 1: return self.val
+
     __repr__ = __str__
