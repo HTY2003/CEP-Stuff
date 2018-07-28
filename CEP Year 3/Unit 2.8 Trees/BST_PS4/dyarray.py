@@ -2,7 +2,8 @@
 import ctypes
 
 class DyArray:
-    '''Implementation of a dynamically resizable array using ctypes arrays
+    '''
+Implementation of a dynamically resizable array using ctypes arrays
 
 Includes the following dynamic array functions: append, insert, remove, pop, & merge'''
 
@@ -229,17 +230,3 @@ Includes the following dynamic array functions: append, insert, remove, pop, & m
             self._size += arrayB.size
         for i in range(len(arrayB)):
             self._elements[length + i] = arrayB[i]
-
-'''
-Analysis: The extra capacity in the array makes appending and removing
-faster despite the extra storage used, since one only needs to set the
-index and increase the size (only resizing when needed).
-
-However, functions that add or remove specific indexes(pop, insert, remove)
-require moving the indexes individually, so they'll take longer depending
-on array size.
-
-The resize is also faster thanks to the ctypes.memmove function, which
-directly copies bytes from the old array to the new larger one, instead
-of looping through it and adding elements 1-by-1.
-'''

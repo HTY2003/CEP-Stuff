@@ -3,17 +3,17 @@ from dyarray import DyArray
 
 class SplayBST:
     '''
-    Binary splay tree, where a node is splayed to the top of the tree when it is added to the tree or accessed
-    through a binary search. When a node is deleted, the parent of the deleted node is splayed instead.
+Binary splay tree, where a node is splayed to the top of the tree when it is added to the tree or accessed
+through a binary search. When a node is deleted, the parent of the deleted node is splayed instead.
 
-    Keeping the more frequently accessed nodes near the top of the tree allows for extremely fast access speeds
-    when accessing the same few nodes over and over, resulting in possibly O(1) search time complexity.
+Keeping the more frequently accessed nodes near the top of the tree allows for extremely fast access speeds
+when accessing the same few nodes over and over, resulting in possibly O(1) search time complexity.
 
-    Nodes are created with key-value pairs, the value being returned when a node with the corresponding key is found.
-    While duplicate keys are not allowed, the value of an existing key can be overwritten with a new value.
+Nodes are created with key-value pairs, the value being returned when a node with the corresponding key is found.
+Duplicate keys are handled by making the value an array and appending the new value.
 
-    To reduce the memory burden that the linked nodes cause, the class instructs Python to only use a static amount
-    of memory for our fixed number of variables, reducing RAM usage drastically
+To reduce the memory burden that the linked nodes cause, the class instructs Python to only use a static amount
+of memory for our fixed number of variables, reducing RAM usage drastically
     '''
 
     #allocate static amount of memory to variables instead of a dynamic dictionary
@@ -67,7 +67,7 @@ class SplayBST:
         [(1.5, 3), (1, 2), (2, 1)]
         '''
         string = ''
-        for i in self._preOrderGen(self.root): string += str(i) + ", "
+        for i in self._preOrderGen(self.root): string += str(i) + ', '
         return '[' + string[:-2] + ']'
 
     def __iter__(self):
@@ -149,7 +149,7 @@ class SplayBST:
         >>> a.add(1.5, 0)
         [(1.5, 0), (1, 2), (2, 3)]
         '''
-        assert key is not None, "Key cannot be None"
+        assert key is not None, 'Key cannot be None'
         if self.length > 0: self.root = self._splayNode(self.root, self._addNode(self.root, key, value))
         else:
             self.root = Node(key, value)
@@ -170,7 +170,7 @@ class SplayBST:
         None
 
         '''
-        assert key is not None, "Key cannot be None"
+        assert key is not None, 'Key cannot be None'
         node = self._searchNode(self.root, key)
         self.root = self._splayNode(self.root, node)
         return node.val if node else None
@@ -220,9 +220,12 @@ class SplayBST:
         '''Returns levelorder list of all nodes'''
         return list(self._levelOrderGen(self.root))
 
+    def layer(self):
+        return self.levelOrder()[-1][1]
+
     def _addNode(self, root, key, value):
         '''
-        Function that inserts a new node into the tree if a new key is specified, and updates value if an existing key is given
+        Function that inserts a new node into the tree if a new key is specified, and appends value to an array if an existing key is given
         The position is determined by the key (left if it is less than a node, right if it is more than a node)
         '''
         def _insert(root, node):
@@ -283,7 +286,8 @@ class SplayBST:
                 temp = root
                 root = self._splayNode(root, _findMinNode(root.right))
                 root.left = temp.left
-            #memory is freed to be garbage collected later
+                temp.left = temp.right = None
+            #nodes not referenced are freed from memory to be garbage collected later
             del temp
             self.length -= 1
             return root
