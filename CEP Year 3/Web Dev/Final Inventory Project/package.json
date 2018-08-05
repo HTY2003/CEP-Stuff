@@ -1,0 +1,14 @@
+{
+  "name": "inventory",
+  "version": "0.0.2",
+  "description": "CEP Web Dev Final Project (INVENTory)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "HTY2003",
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.16.3"
+  }
+}
