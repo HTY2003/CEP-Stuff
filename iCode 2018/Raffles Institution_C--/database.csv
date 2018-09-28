@@ -1,0 +1,151 @@
+Name of Injury,Minor bleeding,Nosebleed,Contusion ,Incision or Laceration,Scalp Bleeding,Forehead Bleeding,Joint Bleeding,Palm bleeding,Amputation,Embedded object,Superficial burn,2nd degree burn,3rd degree burn,Chemical burn,Electrical burn,Sprains and Strains,Ankle Sprains,Cramp,Fracture,Dislocation,Shoulder Dislocation,Elbow Fracture,Upper Arm Fracture,Forearm Fracture,Tibia Fracture,Hip Fracture,Sterilised dog/cat bites,Unsterilised dog/cat bites,Snake bites,Bee sting,Bee sting,Spider bites / Scorpion sting,Minor Jellyfish sting,Severe Jelly fish sting,Hyperventilation,Asthma,Choking,Heat exhaustion,Heat Stroke,Stroke,Shock,Cold,Flu
+Location,Anywhere,Nose,Anywhere,Anywhere,Scalp,Forehead,Joint area,"Palm, hand",Anywhere,Anywhere,Anywhere,Anywhere,Anywhere,Anywhere,Anywhere,Anywhere,Ankle,Anywhere,Anywhere,Anywhere,Shoulder,Elbow,Upper arm,forearm,"Tibia, leg, feet, lower body","Hip,waist",Anywhere,Anywhere,Anywhere,Anywhere,Anywhere,Anywhere,Anywhere,Anywhere,"Nose, mouth","Nose, mouth","Nose, mouth",Everywhere,Everywhere,Everywhere,Everywhere,Everywhere,Everywhere
+Causes / Clues to help in diagnosis,,"Warm and dry weather, Sneezing,Knocks/bumps to nose, Insertion of foreign objects into nose",,,,,,,,,"burn, came into contact with hot object","burn, came into contact with hot object","burn, came into contact with hot object",came into contact with chemicals,came into contact with electricity,"Went for sudden strenuous exercise, overexertion",,"Overexertion, drank little water when exercising,exercised on a hot day",Sudden impact on bone(fell down),Sudden impact on bone(fell down),Sudden impact on bone(fell down),Sudden impact on bone(fell down),Sudden impact on bone(fell down),Sudden impact on bone(fell down),Sudden impact on bone(fell down),Sudden impact on bone(fell down),Bitten by a cat/dog,"Bitten by a cat/dog
+Dog might have rabies",Bitten by snake,Stung by bee,Stung by bee,Stung by spider/scorpion,Stung by Jellyfish,Stung by Jellyfish,"Shocking event, nervous",Have asthma condition,"Object stuck in throat,Displays the universal choking sign","Overexertion,Lack of fluids","Untreated Heat Exhaustion,Not sweating",,"Bled for a long time,Poison,Heart attack,Spinal injury",Symtoms occuring for more than 2 days,Symtoms occured suddenly less than 2 days
+Symptoms,"Bleeding,small wound, small cut on skin",Blood trickling out of nose,"Bruising, blue green or black skin","Blood is present, excessive bleeding, deep cut","Blood is present, excessive bleeding, open wound","Blood is present, excessive bleeding, open wound","Blood is present, excessive bleeding, open wound","Blood is present, excessive bleeding, open wound","Blood is present, excessive bleeding, open wound, body part detached from body","Blood is present, excessive bleeding, open wound, object stuck in wound",Red swollen skin at the burn site,"Burnt area is reddened,Blisters","waxy and pale burnt area or skin is charred and blackened
+",Chemicals,touched an electric circuit/device,"Swelling and bruising, difficulty in moving the muscle, pain and tenderness in affected area","Swelling and bruising, difficulty in moving the muscle, pain and tenderness in affected area","Swelling and bruising, difficulty in moving the muscle, pain and tenderness in affected area","Could not move injured area, Swelling and/or bruising around affected joint,Deformity,Pain in the injured area,Loss of function in the injured area
+","Could not move injured area,Severe pain,Swelling and bruising around affected joint,Deformity
+","Shoulder out of place, Swelling and/or bruising around affected joint, Pain in the injured area, Loss of function in the injured area
+","Could not move elbow, swelling and bruising of elbow, pain in the injured area","Severe pain,Swelling and bruising around affected joint,could not bear weight on injured area
+","Severe pain,Swelling and bruising around affected joint,could not bear weight on injured area
+","Could not move injured area,Severe pain,Swelling and bruising around affected joint,Deformity, cannot feel feet
+","Inability to move immediately after a fall,Severe pain in your hip or groin,Inability to put weight on your leg on the side of your injured hip,Stiffness bruising and swelling in and around your hip area","A laceration in the skin caused by teeth,A contusion at bite area, dog is sterilised","A laceration in the skin caused by teeth,A contusion at bite area, dog is not sterilised","Two puncture wounds,swelling and redness around the wounds,pain at the bite site,difficulty breathing,vomiting and nausea,blurred vision,sweating and salivating,numbness in the face and limbs.","Puncture wound at sting area,Redness and swelling around sting area,Sharp, burning pain
+
+","Nausea, vomiting or diarrhea,Dizziness or fainting,breathing difficulties,Fever,skin reactions,Dizzieness/fainting,Loss of consciousness","Puncture wound at sting area,itching or rash,pain/soreness around the area of the bite,difficulty breathing,headache,nausea and vomiting,tingling and numbness around the sting,swelling around the sting","Burning prickling stinging pain, Red, brown purplish tracks on the skin,Itching,Swelling","Stomach pain, nausea, vomiting,Headache,Muscle pain or spasms,Weakness, drowsiness, fainting, confusion,Difficulty breathing","Unnaturally fast breathing,Dizziness,Fast pulse,Trembling or cramps in the hand or feet
+","Excessive coughing,Wheezing as casualty breathes in & out,Difficulty in speaking,Distress and anxiety,Blue skin","Cannot breathe or experiencing loud difficult breathing,Cannot speak,Inability to cough effectively,Blue or gray color to lips and fingernail beds","Headache, fatigue, confusion, dizziness, sweating with pale clammy skin,Rapid but weak pulse and breathing","Unconciousness, headache, fatigue, confusion, dizziness, pale clammy skin,Rapid but weak pulse and breathing, Not sweating","Facial weakness at one side of the face, arms too weak to raise up,Slurred speech","Untreated bleeding, Pale cold skin,Excessive sweating,Rapid, shallow breathing
+Grayish-blue skin,Weakness and diziness, Nausea, vomiting, thirst","Loss of appetite, sore throat,sneezing,cough,vomiting,fever less than 38.8 celsius, runny nose","muscle pain,high fever,headache,fatigue,chills"
+Severity,Minor,Minor,"Minor,Moderate",Moderate,"Moderate,Life-threatening","Moderate,Life-threatening",Moderate,Moderate,"Moderate,Life-threatening",Moderate,Minor,Moderate,Life-threatening,"Moderate,Life-threatening","Moderate,Life-threatening",Moderate,Moderate,Moderate,"Moderate,Life-threatening","Moderate,Life-threatening",Moderate,Moderate,Moderate,Moderate,Moderate,"Moderate,Life-threatening",Minor,Life-threatening,Minor/Life-threatening, Minor, Moderate/Life-threatening,Moderate/Life-threatening,Minor,Moderate/Life-threatening,Moderate,"Moderate,Life-threatening","Moderate,Life-threatening",Moderate,Life-threatening,Life-threatening,Life-threatening,Minor,"Moderate,Life-threatening"
+Treatment Overview,"Wash and clean the wound with alcoholic wipes and aniseptic cream/solution. Afterwards, cover it with a plaster","Pinch the bridge of the nose
+
+Lean forward for 10 mins or until the bleeding stops","Allow casualty to rest
+
+Stretch and massage affected area
+
+Apply ice to injured area and compress
+","Wash wound. Cover it with roller bandage.
+Advised to see a doctor","Cover it with roller bandage.
+Advised to see a doctor
+If unconcious, advised to call 995","Cover it with roller bandage.
+Advised to see a doctor
+If unconcious, advised to call 995","Wash wound. Cover it with roller bandage.
+Advised to see a doctor","Wash wound. Cover it with roller bandage.
+Advised to see a doctor","Preserve body part, cover the bleeding with a bandage
+Call 995","Apply pressure to areas around wound 
+Call 995
+Do not attempt to remove object","Remove stress on the affected area and wash it under cool water. Finally, cover it with a bandage",,,Ventilate surroundings and wash wound. Remove contaminated objects and seek medical attention immediately.,Call 995. Ensure casualty is not touching any electrical source. Cover entry and exit wounds and ensure casualty does not fall unconscious,Rest and cool the area using an ice pack and compress. Keep area raised above heart level,Rest and cool the area using an ice pack and compress. Keep area raised above heart level,"Get to a cool area and stretch the affected muscles, drink water or isotonic drinks.","Immobilization using triangular bandages
+Go to the hospital","Immobilization using triangular bandages
+Go to the hospital","Immobilization using triangular bandages
+Go to the hospital","Immobilization using triangular bandages
+Go to the hospital","Immobilization using triangular bandages
+Go to the hospital","Immobilization using triangular bandages
+Go to the hospital","Immobilization using triangular bandages
+Go to the hospital","Immobilization using triangular bandages
+Go to the hospital",Stop bleeding with pressure roller,Stop bleeding with pressure roller,Immobilise affected area to prevent spread of venom,Remove stinger and apply ice to affected area,Remove stinger and apply ice to affected area,"Elevate, apply ice, and immobilise affected part",Apply vinegar / seawater to injury,Apply vinegar / seawater to injury,"Calm down, cup your mouth and re-breathe your own air","Sit down, keep calm and get a inhaler. Breathe slowly and deeply. If situation does not improve, call 995",Heimlich maneuver or Chest trust for pregnant and obese people.,"Drink water and stay in cool shady areas, alleviate legs and monitor vital signs. If condition does not improve, call 995","Call 995
+Stay in cool and shady area, pour water and continuously fan body. Monitor vital signs and check for responses periodically while waiting for emergency servies to arrive","Conduct F.A.S.T. check
+Call 995 and monitor vital signs","Treat cause of shock
+Lie casualty down
+Elevate legs
+Loosen any tight clothing
+Keep talking to casualty
+Monitor vital signs",Rest in bed and monitor temperature regularly,"Call doctor, rest in bed and monitor body temperature regularly"
+Specific treatment,"
+1. Wash wound with clean water
+2. Dry the wound
+3. Use alcoholic wipes to clean the wound
+4. Apply antiseptic cream/solution on the wound to prevent infection
+5. Cover wound with a plaster, gauze, or melolin depending on size/extent of injury (melolin for heavier bleeding)
+
+For plasters (if it is on toe/finger)
+Criss-cross around the affected finger.
+","1. Sit down
+2. Tilt head forward
+3. Breathe through the mouth
+4. Pinch soft part of nose for 10 mins
+5. Try not to speak, swallow, or cough
+6. After 10 minutes, release pinching of nose and check if nosebleed still occurs
+7. If bleeding continues, repeat steps 4-6
+8. If bleeding still continues, call 995",NA,Steps for pressure roller,,,,,"1) Call 995
+2) Place body part in plastic bag with ice pack
+3) Label the plastic bag with body part name, persons name, date and time
+4) Place it in a cold environment till help arrives
+5) Cover the bleeding with a bandage
+6) Keep affected area above heart level and keep still.",,"1. Remove constrictors, e.g. watches, at swollen area
+2. Cool burnt area under tepid water for 10 min
+3. Cover affected area with sterile dressing",,,"1. Ventilate the area to diffuse any fumes or gases, e.g. opening windows or turning on fans
+2. Flush burnt area with water for 20 minutes to remove any traces of chemicals
+3. Remove any clothing that came into contact with the chemical
+4. Seek medical attention immediately as effects of the chemical may not be apparent","1. Call 995 immediately
+2. Ensure casualty is not in contact with any electrical sources before tpuching them
+3. Look for an entry and exit wound and cover them (exit wounds are usaually at the feet)
+4. Keep close attention to casualty and ensure he does not fall unconscious while waiting for medical aid.","1. Rest and support injured area.
+2. Cool the area by applying an ice pack or cold compress.
+3. Apply compression to injured area by surrounding area with a thick layer of soft padding like cotton wool.
+4. Raise and support injured part.
+","1. Rest and support injured area.
+2. Cool the area by applying an ice pack or cold compress.
+3. Apply compression to injured area by surrounding area with a thick layer of soft padding like cotton wool.
+4. Raise and support injured part.
+","1. Rest and support injured area.
+2. Stretch the affected area
+3. Cool the area by applying an ice pack or cold compress.
+4. Apply compression to injured area by surrounding area with a thick layer of soft padding like cotton wool.
+5. Raise and support injured part.
+6. Drink lots of water to hydrate yourself
+",Secure fractured area with belts strings and bandages so that it does not move too much,Secure fractured area with belts strings and bandages so that it does not move too much,Secure fractured area with belts strings and bandages so that it does not move too much,Secure fractured area with belts strings and bandages so that it does not move too much,Secure fractured area with belts strings and bandages so that it does not move too much,Secure fractured area with belts strings and bandages so that it does not move too much,Secure fractured area with belts strings and bandages so that it does not move too much,Secure fractured area with belts strings and bandages so that it does not move too much,"1) Wash wound with saline solution
+2) Dry with gauze
+3) Use alcohol swab to further clean the wound if needed
+4) Apply clean dressing to wound with gauze and roller bandage
+5) Seek medical attention","1) Wash wound with saline solution
+2) Dry with gauze
+3) Use alcohol swab to further clean the wound if needed
+4) Apply clean dressing to wound with gauze and roller bandage
+5) Seek medical attention","1) Identify whether it is a venomous or non-venomous bite
+2) Lie casualty down with head and shoulder raised
+3) Seek medical attention
+4) Apply pressure bandage above bite area
+5) Immobilise bite area and monitor casualty for breathing difficulty","1) If stinger is in the wound, flick it out with the edge of your card
+2) Apply ice pack to wound
+3) If stinger is in the mouth, give casualty ice to suck to cold water to sip
+4) Seek medical attention","1) If stinger is in the wound, flick it out with the edge of your card
+2) Apply ice pack to wound
+3) If stinger is in the mouth, give casualty ice to suck to cold water to sip
+4)  call 995 and seek immediate medical attention","1) Get casualty to sit or lie down
+2) Elevate affected part
+3) Apply ice pack for at least 10 minutes
+4) Immobilise affected part
+5) Monitor vital signs
+6) Call emergency help immediately","1) Get casualty to sit or lie down
+2) Pour vinegar / seawater on affected area
+3) Monitor casualty for breathing difficulty
+4) Seek medical attention","1) Get casualty to sit or lie down
+2) Pour vinegar / seawater on affected area
+3) Monitor casualty for breathing difficulty
+4) Call 995 and seek medical attention","1. Remove casualty from cause of distress.
+2. Reassure and calm casualty down.
+3. Let casualty re-breathe his own expired air covering mouth and nose
+4. Do not advise casualty to re-breathe her own air from a paper bag as this can cause
+more serious problems.
+","1. Keep casualty calm by reassuring him/her
+2. Get casualty to get blue inhaler
+3. Get casualty to breathe slowly and deeply.
+4. Sit casualty down in a position most comfortable. (DO NOT lie casualty down)
+5. A mild asthma attack should clear within a few minutes. If not, get casualty to take another
+dose from inhaler.
+6. Call for medical help at 995 if the situation does not improve.
+","Heimlich maneuver:
+1. Wrap your arms around the person's waist. 
+2. Lean them forward slightly.
+3. Position fist 2 fingers above belly button and cover fist with other hand
+4. Perform backward trusts in sets of 5
+5. Call 995 if situation does not improve
+
+Modified Heimlich (for pregnant/obese people):
+1. Wrap your arms around the person's waist. 
+2. Lean them forward slightly.
+3. Position fist between in area below ribcage above navel and cover fist with other hand
+4. Perform backward trusts in sets of 5
+5. Call 995 if situation does not improve","1. Give water/isotonic drink to casualty
+2. Bring casualty to cool shady area
+3. Monitor vital signs
+4. Alleviate legs
+",NA,NA,NA,NA,NA

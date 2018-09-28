@@ -315,7 +315,8 @@ of memory for our fixed number of variables, reducing RAM usage drastically
                 temp = root
                 root = self._splayNode(root, _findMinNode(root.right))
                 root.left = temp.left
-                temp.left = temp.right = None
+                temp.left = None
+                temp.right = None
             #nodes not referenced are freed from memory
             del temp
             #updates length

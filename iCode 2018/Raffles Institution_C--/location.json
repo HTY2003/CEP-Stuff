@@ -1,0 +1,10 @@
+{
+    "location":
+    {   "head": ["nose", "forehead", "scalp"],
+        "arm":  ["shoulder", "elbow", "forearm", "upper arm", "hand"],
+        "palm": ["hand"],
+        "limb": ["shoulder", "elbow", "forearm", "upper arm", "hand", "ankle"],
+        "foot": ["ankle"],
+        "hip":  ["waist"]
+    }
+}

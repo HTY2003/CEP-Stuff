@@ -1,0 +1,752 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "akinjury",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": [
+                        "exit"
+                    ]
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "Help"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "stop"
+                    ]
+                },
+                {
+                    "name": "treat",
+                    "slots": [],
+                    "samples": [
+                        "What should I do",
+                        "Treat my injury",
+                        "How do I treat my injury"
+                    ]
+                },
+                {
+                    "name": "identify",
+                    "slots": [
+                        {
+                            "name": "type",
+                            "type": "TYPE",
+                            "samples": [
+                                "{type}",
+                                "Idk",
+                                "I don't know",
+                                "I am {type}",
+                                "I have a {type}"
+                            ]
+                        },
+                        {
+                            "name": "painlvl",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "It is {painlvl}",
+                                "{painlvl}"
+                            ]
+                        },
+                        {
+                            "name": "loc",
+                            "type": "BODPART",
+                            "samples": [
+                                "It's located at my {loc}",
+                                "{loc}",
+                                "It is located at my {loc}",
+                                "my {loc}",
+                                "It is on my {loc}",
+                                "It's on my {loc}",
+                                "It's at my {loc}",
+                                "It's on the {loc}",
+                                "It is on the {loc}",
+                                "It is at my {loc}"
+                            ]
+                        },
+                        {
+                            "name": "symone",
+                            "type": "SYM",
+                            "samples": [
+                                "theres {symone}",
+                                "It has {symone}",
+                                "I felt {symone}",
+                                "I have {symone}",
+                                "I had {symone}",
+                                "{symone}",
+                                "It is {symone}",
+                                "It was {symone}",
+                                "I was {symone}",
+                                "I had a {symone}",
+                                "I have a {symone}",
+                                "I'm {symone}",
+                                "I am {symone}",
+                                "I feel {symone}",
+                                "There's {symone}"
+                            ]
+                        },
+                        {
+                            "name": "symtwo",
+                            "type": "SYM",
+                            "samples": [
+                                "theres {symtwo}",
+                                "There's {symtwo}",
+                                "I had {symtwo}",
+                                "I have {symtwo}",
+                                "I am {symtwo}"
+                            ]
+                        },
+                        {
+                            "name": "symthree",
+                            "type": "SYM",
+                            "samples": [
+                                "theres {symthree}",
+                                "There's {symthree}",
+                                "I had {symthree}",
+                                "I have {symthree}",
+                                "I am {symthree}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "diagnose my injury",
+                        "diagnose me",
+                        "what injury do i have",
+                        "identify the injury on my {loc}",
+                        "I am injured",
+                        "I'm injured",
+                        "Identify my injury",
+                        "Tell me what injury I have"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "TYPE",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "cut"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "NONE",
+                                "synonyms": [
+                                    "don't know"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "fracture"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "bite",
+                                "synonyms": [
+                                    "sting"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "strain",
+                                "synonyms": [
+                                    "cramp",
+                                    "sprain"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "bleed",
+                                "synonyms": [
+                                    "nosebleed",
+                                    "bleeding"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "burn"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "SYM",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "wound",
+                                "synonyms": [
+                                    "hole",
+                                    "open wound"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "wheezing",
+                                "synonyms": [
+                                    "wheeze"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "waxy skin",
+                                "synonyms": [
+                                    "waxy"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "trouble breathing",
+                                "synonyms": [
+                                    "cannot breathe"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "trembling",
+                                "synonyms": [
+                                    "shaking",
+                                    "tremble"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "swelling",
+                                "synonyms": [
+                                    "swelling up",
+                                    "swell"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "sweating",
+                                "synonyms": [
+                                    "sweat"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "sharp pain",
+                                "synonyms": [
+                                    "very painful"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "reddening",
+                                "synonyms": [
+                                    "red skin",
+                                    "red"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "pale skin",
+                                "synonyms": [
+                                    "paleness",
+                                    "pale"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "painful when touched",
+                                "synonyms": [
+                                    "tender",
+                                    "pain when touched"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "numbness",
+                                "synonyms": [
+                                    "numb"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "nausea",
+                                "synonyms": [
+                                    "nauseous",
+                                    "feels nauseous"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "itch",
+                                "synonyms": [
+                                    "itchy",
+                                    "feels itchy"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "headache"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "fast pulse",
+                                "synonyms": [
+                                    "pulse is fast",
+                                    "rapid pulse"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "excessive blood loss",
+                                "synonyms": [
+                                    "massive blood loss",
+                                    "massive blood",
+                                    "a lot of blood loss",
+                                    "a lot of blood"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "electric shock",
+                                "synonyms": [
+                                    "shocked",
+                                    "touched electricity"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "dizzy",
+                                "synonyms": [
+                                    "feel dizzy",
+                                    "feels dizzy",
+                                    "dizziness"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "deformity",
+                                "synonyms": [
+                                    "mishappen",
+                                    "mishape",
+                                    "deformed"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "cut"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "cough",
+                                "synonyms": [
+                                    "coughing"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "confusion",
+                                "synonyms": [
+                                    "confused"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "chemical",
+                                "synonyms": [
+                                    "touched chemicals",
+                                    "chemicals",
+                                    "chemical burn"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "charred skin"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "cannot see",
+                                "synonyms": [
+                                    "see nothing",
+                                    "no vision",
+                                    "loss of vision"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "cannot move",
+                                "synonyms": [
+                                    "immobile"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "burnt skin",
+                                "synonyms": [
+                                    "burnt"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "bruise",
+                                "synonyms": [
+                                    "a bruise",
+                                    "bruised"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "blue skin",
+                                "synonyms": [
+                                    "blue"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "blisters",
+                                "synonyms": [
+                                    "blistered",
+                                    "a blister",
+                                    "blister"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "bleeding",
+                                "synonyms": [
+                                    "blood",
+                                    "bled",
+                                    "bleed"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "black",
+                                "synonyms": [
+                                    "black skin"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "BODPART",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "neck"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "ear"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "mouth"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "forehead"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "hair"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "scalp"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "eye"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "toe"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "foot"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "thigh"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "kneecap"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "elbow"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "knee"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "hip"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "waist"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "back"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "chest"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "shoulder"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "upper arm"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "forearm"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "wrist"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "finger"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "arm"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "nose"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "identify",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "type",
+                            "type": "TYPE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.508056705383.1216799245514"
+                            }
+                        },
+                        {
+                            "name": "painlvl",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.508056705383.470905496378"
+                            }
+                        },
+                        {
+                            "name": "loc",
+                            "type": "BODPART",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.508056705383.793792906850"
+                            }
+                        },
+                        {
+                            "name": "symone",
+                            "type": "SYM",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.508056705383.774745442725"
+                            }
+                        },
+                        {
+                            "name": "symtwo",
+                            "type": "SYM",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.508056705383.816384198478"
+                            }
+                        },
+                        {
+                            "name": "symthree",
+                            "type": "SYM",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.508056705383.1130719713141"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.508056705383.1216799245514",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What type of injury do you have?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Is your injury a bleeding, burn, sprain, fracture, bite or something else?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.508056705383.470905496378",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "On a scale of one to ten, one being the least painful and ten being the most painful, rate your injury"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.508056705383.793792906850",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Where is your injury located?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.508056705383.774745442725",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Could you give one symptom of your injury?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.508056705383.816384198478",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please provide one more symptom"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.508056705383.1130719713141",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "One more symptom, please"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.157577623266",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I'm sorry, could you repeat yourself?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.450814760116",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "hi"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.40477827880",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "So can i confirm your injury is a {type} injury, it is at {loc} , and it is of level {painlvl} pain. You also feel {symone} , {symtwo} and {symthree} ?"
+                    }
+                ]
+            }
+        ]
+    }
+}
