@@ -91,7 +91,7 @@ class HashTable:
     __slots__ = ('size', 'taken', 'data')
 
     #---BUILT-IN FUNCTIONS---
-    def __init__(self, size=128):
+    def __init__(self, size=1):
         '''Initializes array and length attributes'''
         self.size, self.taken, self.data = size, 0, array(size)
 
@@ -237,7 +237,6 @@ class HashTable:
         #2 possible hashes: hash 1 is FNV1, hash 2 is CRC32
         hash1 = self._fnv1(key)
         hash2 = self._crc32(key)
-        #print((original1, original2), (hash1, hash2))
 
         #LOOP (Looping back to whether we started)
         #If this happens, we have to resize and rehash the entire table befpre continuing
@@ -303,7 +302,7 @@ class HashTable:
         Cyclic Redundancy Check 32(CRC32), known for a lack of collisions
         '''
         if data == 0: data = 'zero'
-        if isinstance(data, int): data = bytes(data)
+        if isinstance(data, int): data = bytes(str(data),'utf-8')
         else: data = bytes(data, 'utf-8')
         crc = 0
         for byte in data: crc = TABLE[(crc ^ _get_byte(byte)) & 0xff] ^ (crc >> 8)

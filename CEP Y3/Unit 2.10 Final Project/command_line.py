@@ -446,14 +446,14 @@ def main():
                                 data = _process(commandlist[4:])
                                 if data != None:
                                     #deletes each user in search result
-                                    for i in main.book.andsearch(data): reply = deluser(i[0])
+                                    for i in main.book.andsearch(data): deluser(i[0])
 
                             #OR deletion
                             elif commandlist[3].upper() == 'OR':
                                 data = _process(commandlist[4:])
                                 if data != None:
                                     #deletes each user in search result
-                                    for i in main.book.orsearch(data): reply = deluser(i[0])
+                                    for i in main.book.orsearch(data): deluser(i[0])
 
                             else: Color.red('Invalid command: ' + commandlist[3])
                         else: Color.red('Invalid command: ' + ' '.join(commandlist))
